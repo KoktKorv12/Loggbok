@@ -14,26 +14,32 @@ public class Entry{
     }
 
     public User getAuthor() {
+
         return author;
     }
 
     public void setAuthor(User author) {
+
         this.author = author;
     }
 
-    public String getContentEntry() {
+    public String getContentEntry()
+    {
         return contentEntry;
     }
 
     public void setContentEntry(String contentEntry) {
+
         this.contentEntry = contentEntry;
     }
 
     public String getEntryDate() {
+
         return entryDate;
     }
 
     public void setEntryDate(String entryDate) {
+
         this.entryDate = entryDate;
     }
 }
