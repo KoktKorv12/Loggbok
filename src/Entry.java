@@ -1,16 +1,17 @@
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Entry{
 
     private User author;
     private String contentEntry;
-    private String entryDate;
+    private Date entryDate;
 
     public Entry(String contentEntry, User author){
         this.author = author;
         this.contentEntry = contentEntry;
-        this.entryDate = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+        this.entryDate = java.util.Calendar.getInstance().getTime();
     }
 
     public User getAuthor() {
@@ -33,13 +34,11 @@ public class Entry{
         this.contentEntry = contentEntry;
     }
 
-    public String getEntryDate() {
-
+    public Date getEntryDate() {
         return entryDate;
     }
 
-    public void setEntryDate(String entryDate) {
-
+    public void setEntryDate(Date entryDate) {
         this.entryDate = entryDate;
     }
 }
